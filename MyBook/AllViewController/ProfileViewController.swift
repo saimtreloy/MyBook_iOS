@@ -22,7 +22,7 @@ class ProfileViewController: UIViewController {
             self.lblMobile.text = self.preferences.string(forKey: KEY_SAVE_MOBILE)
             self.lblStudentID.text = self.preferences.string(forKey: KEY_SAVE_AGE)
             self.lblAddress.text = self.preferences.string(forKey: KEY_SAVE_ADDRESS)
-            
+            print(self.preferences.string(forKey: KEY_SAVE_PHOTO)!)
             Alamofire.request(self.preferences.string(forKey: KEY_SAVE_PHOTO)!).responseImage { response in
                 if let image = response.result.value {
                     self.imgProfile.image = image
