@@ -23,5 +23,11 @@ class HomeViewController: UIViewController {
         navigationController?.pushViewController(myVC, animated: true)
     }
     
+    @IBAction func btnSaveContentAction(_ sender: Any) {
+        let myVC = storyboard?.instantiateViewController(withIdentifier: "storyboardContent") as! ContentUIViewController
+        myVC.book_name = "SAVE"
+        myVC.vc_title = "Saved Audio/Video"
+        navigationController?.pushViewController(myVC, animated: true)
+    }
     
 }

@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		1FFEB3F7C653E0442FE2C510 /* Pods_MyBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA18E3FCED6D8E6269F5524 /* Pods_MyBook.framework */; };
+		BA43E7552105B57200466A76 /* SaveContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43E7542105B57200466A76 /* SaveContent.swift */; };
+		BA43E7572105DBE900466A76 /* KdePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43E7562105DBE900466A76 /* KdePlayerViewController.swift */; };
 		BA5D69802102F8880021E00F /* ContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5D697F2102F8880021E00F /* ContentTableViewCell.swift */; };
 		BA5D69822102F9280021E00F /* ContentUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5D69812102F9280021E00F /* ContentUIViewController.swift */; };
 		BA5D69842102FA2A0021E00F /* ModelContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5D69832102FA2A0021E00F /* ModelContent.swift */; };
 		BA60CAFD20FF5386004A748D /* SharedPrefDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA60CAFC20FF5386004A748D /* SharedPrefDatabase.swift */; };
 		BA60CB0220FF594E004A748D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA60CB0120FF594E004A748D /* HomeViewController.swift */; };
+		BAA7E81C21044F8D00BFB3C8 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E81B21044F8D00BFB3C8 /* PlayerViewController.swift */; };
+		BAA7E81E2104602E00BFB3C8 /* CachingPlayerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7E81D2104602E00BFB3C8 /* CachingPlayerItem.swift */; };
 		BAABAB3C20FDAAD5000D5CCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAABAB3B20FDAAD5000D5CCD /* AppDelegate.swift */; };
 		BAABAB3E20FDAAD5000D5CCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAABAB3D20FDAAD5000D5CCD /* ViewController.swift */; };
 		BAABAB4120FDAAD5000D5CCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAABAB3F20FDAAD5000D5CCD /* Main.storyboard */; };
@@ -29,11 +33,15 @@
 
 /* Begin PBXFileReference section */
 		9AA18E3FCED6D8E6269F5524 /* Pods_MyBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA43E7542105B57200466A76 /* SaveContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveContent.swift; sourceTree = "<group>"; };
+		BA43E7562105DBE900466A76 /* KdePlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KdePlayerViewController.swift; sourceTree = "<group>"; };
 		BA5D697F2102F8880021E00F /* ContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTableViewCell.swift; sourceTree = "<group>"; };
 		BA5D69812102F9280021E00F /* ContentUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentUIViewController.swift; sourceTree = "<group>"; };
 		BA5D69832102FA2A0021E00F /* ModelContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelContent.swift; sourceTree = "<group>"; };
 		BA60CAFC20FF5386004A748D /* SharedPrefDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedPrefDatabase.swift; sourceTree = "<group>"; };
 		BA60CB0120FF594E004A748D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BAA7E81B21044F8D00BFB3C8 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		BAA7E81D2104602E00BFB3C8 /* CachingPlayerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingPlayerItem.swift; sourceTree = "<group>"; };
 		BAABAB3820FDAAD5000D5CCD /* MyBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAABAB3B20FDAAD5000D5CCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAABAB3D20FDAAD5000D5CCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +91,8 @@
 				BABF75802100901F00E938E1 /* ProfileViewController.swift */,
 				BABF75822100A0F500E938E1 /* AllBooksViewController.swift */,
 				BA5D69812102F9280021E00F /* ContentUIViewController.swift */,
+				BAA7E81B21044F8D00BFB3C8 /* PlayerViewController.swift */,
+				BA43E7562105DBE900466A76 /* KdePlayerViewController.swift */,
 			);
 			path = AllViewController;
 			sourceTree = "<group>";
@@ -127,6 +137,8 @@
 			children = (
 				BABB525C20FDDEA9005512B7 /* Api_URL.swift */,
 				BA60CAFC20FF5386004A748D /* SharedPrefDatabase.swift */,
+				BAA7E81D2104602E00BFB3C8 /* CachingPlayerItem.swift */,
+				BA43E7542105B57200466A76 /* SaveContent.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -257,13 +269,15 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyBook/Pods-MyBook-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
-				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
+				"${BUILT_PRODUCTS_DIR}/KDEAudioPlayer/KDEAudioPlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KDEAudioPlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -283,14 +297,18 @@
 				BABF757F21008CEE00E938E1 /* PaddingLabel.swift in Sources */,
 				BA60CB0220FF594E004A748D /* HomeViewController.swift in Sources */,
 				BA60CAFD20FF5386004A748D /* SharedPrefDatabase.swift in Sources */,
+				BA43E7572105DBE900466A76 /* KdePlayerViewController.swift in Sources */,
 				BABF75832100A0F500E938E1 /* AllBooksViewController.swift in Sources */,
 				BA5D69842102FA2A0021E00F /* ModelContent.swift in Sources */,
 				BA5D69822102F9280021E00F /* ContentUIViewController.swift in Sources */,
 				BAABAB3E20FDAAD5000D5CCD /* ViewController.swift in Sources */,
 				BAABAB3C20FDAAD5000D5CCD /* AppDelegate.swift in Sources */,
+				BA43E7552105B57200466A76 /* SaveContent.swift in Sources */,
+				BAA7E81E2104602E00BFB3C8 /* CachingPlayerItem.swift in Sources */,
 				BABF75812100901F00E938E1 /* ProfileViewController.swift in Sources */,
 				BABB525D20FDDEA9005512B7 /* Api_URL.swift in Sources */,
 				BA5D69802102F8880021E00F /* ContentTableViewCell.swift in Sources */,
+				BAA7E81C21044F8D00BFB3C8 /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

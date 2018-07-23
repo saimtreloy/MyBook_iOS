@@ -12,8 +12,6 @@ import AlamofireImage
 
 class ContentUIViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating{
     
-    
-    
     let CONTENT_URL = "http://www.mamunscare.org/BOOKAPP_API/getContentByCategory.php"
     let CONTENT_URL_AUDIO = "http://www.mamunscare.org/BOOKAPP_API/getMainAudio.php"
     let CONTENT_URL_VIDEO = "http://www.mamunscare.org/BOOKAPP_API/getMainVideo.php"
@@ -57,7 +55,6 @@ class ContentUIViewController: UIViewController, UITableViewDataSource, UITableV
                 if let image = response.result.value {
                     cell.imgCover.image = image
                 }
-                
             }
         }
         
@@ -81,6 +78,36 @@ class ContentUIViewController: UIViewController, UITableViewDataSource, UITableV
         searchController.dismiss(animated: false, completion: nil)
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let mContent:ModelContent
+        if self.searchController.isActive && self.searchController.searchBar.text != "" {
+            mContent = self.modelContentFilter[indexPath.row]
+        } else {
+            mContent = self.modelContent[indexPath.row]
+        }
+        
+        print(mContent.id!)
+        print(mContent.name!)
+        print(mContent.banner!)
+        print(mContent.category!)
+        print(mContent.location!)
+        print(mContent.type!)
+        print(mContent.date_time!)
+        
+        //let myVC = storyboard?.instantiateViewController(withIdentifier: "storyboardPlayerKDE") as! PlayerViewController
+        let myVC = storyboard?.instantiateViewController(withIdentifier: "storyboardPlayerKDE") as! KdePlayerViewController
+        myVC.content_id = mContent.id!
+        myVC.content_name = mContent.name!
+        myVC.content_banner = mContent.banner!
+        myVC.content_category = mContent.category!
+        myVC.content_location = mContent.location!
+        myVC.content_type = mContent.type!
+        myVC.content_date = mContent.date_time!
+        
+        //myVC.vc_title = self.modelAllBooks[indexPath.row].category_name!
+        navigationController?.pushViewController(myVC, animated: true)
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,6 +120,8 @@ class ContentUIViewController: UIViewController, UITableViewDataSource, UITableV
             GET_BOOK_AUDIO(full_name: self.preferences.string(forKey: KEY_SAVE_FULLNAME)!)
         } else if (book_name == "VIDEO") {
             GET_BOOK_VIDEO(full_name: self.preferences.string(forKey: KEY_SAVE_FULLNAME)!)
+        } else if (book_name == "SAVE") {
+            GET_SAVE_VIDEO(full_name: self.preferences.string(forKey: KEY_SAVE_FULLNAME)!)
         } else {
             GET_BOOK_CONTENTS(full_name: book_name)
         }
@@ -102,6 +131,8 @@ class ContentUIViewController: UIViewController, UITableViewDataSource, UITableV
         searchController.dimsBackgroundDuringPresentation = false
         tblContent.tableHeaderView = searchController.searchBar
     }
+    
+    
     
     func GET_BOOK_CONTENTS(full_name:String) {
         var parameters:[String:String]?
@@ -204,6 +235,11 @@ class ContentUIViewController: UIViewController, UITableViewDataSource, UITableV
             }
             
         }
+        self.tblContent.reloadData()
+    }
+    
+    func GET_SAVE_VIDEO(full_name:String) {
+        self.modelContent = SaveContent.instance.getContents()
         self.tblContent.reloadData()
     }
     
